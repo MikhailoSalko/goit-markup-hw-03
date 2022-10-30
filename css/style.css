@@ -16,6 +16,7 @@
   --accent-color: #2196f3;
   --logo-header-color: #000000;
   --address-footer-color: rgba(255, 255, 255, 0.6);
+  --geolocation-color: #ffffff;
 }
 
 /* Розмітка сторінки index.html */
@@ -38,10 +39,8 @@ h3,
 h4,
 h5,
 h6,
-p,
-ul {
+p {
   margin: 0;
-  padding: 0;
 }
 
 img {
@@ -50,8 +49,10 @@ img {
   height: auto;
 }
 
-.list {
+ul {
   list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 .section {
@@ -61,13 +62,11 @@ img {
 
 .section-flex {
   display: flex;
-  justify-content: center;
 }
 
 .link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Контейнер */
@@ -76,20 +75,38 @@ img {
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Хедер */
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
 
 .header-flex {
   display: flex;
   margin: 0 auto;
   align-items: center;
-
-  border-bottom: 1px solid #ececec;
 }
 
 .logo.word {
+  margin-right: 93px;
+
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -98,8 +115,6 @@ img {
   text-decoration: none;
 
   color: var(--logo-header-color);
-
-  margin-right: 93px;
 }
 
 .logo {
@@ -109,6 +124,7 @@ img {
 .site-nav {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .site-nav .link.current {
@@ -125,10 +141,13 @@ img {
 }
 
 .anchors .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 
   color: var(--secondary-text-color);
 }
@@ -139,15 +158,16 @@ img {
 
 .auth-nav {
   display: flex;
-  margin-left: auto;
-  padding: 0;
 }
 
 .auth-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 
   color: var(--main-text-color);
 }
@@ -161,14 +181,15 @@ img {
 
 .hero {
   padding: 200px 0;
-
   text-align: center;
 
   background-color: var(--second-section-color);
 }
 
 .hero-title {
-  min-width: 696px;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -316,23 +337,10 @@ address {
   margin-bottom: 10px;
 }
 
-.address-list {
-  width: 231px;
-}
-
-.address-list .address-link {
+.address-list.link {
   line-height: 1.71;
-  text-decoration: none;
 
-  color: var(--main-white-color);
-}
-
-.address-list .link {
-  padding: 0;
-  line-height: 1.71;
-  text-decoration: none;
-
-  color: var(--address-footer-color);
+  color: var(--geolocation-color);
 }
 
 .address-list .link:hover,
@@ -342,14 +350,18 @@ address {
 
 /* стилі для портфоліо */
 
-.site-nav-btn.section {
-  padding-bottom: 50px;
+.site-nav-btn.section-flex {
+  margin-bottom: 50px;
+
+  justify-content: center;
 }
+
 .site-nav-btn .portfolio-item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .site-nav-btn .btn {
+  padding: 6px 22px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -359,8 +371,6 @@ address {
 
   color: var(--secondary-text-color);
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border: 0;
   border-radius: 4px;
 }
@@ -369,6 +379,8 @@ address {
 .site-nav-btn .btn:focus {
   background-color: var(--accent-color);
   color: var(--main-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio {

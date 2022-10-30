@@ -15,10 +15,12 @@
     />
 
     <!-- normalize -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- styles -->
@@ -27,17 +29,17 @@
 
   <body>
     <!-- Хедер -->
-    <header>
+    <header class="header">
       <div class="header-flex container">
         <nav class="site-nav">
           <a href="./index.html" class="logo word"><span class="logo">Web</span>Studio</a>
-          <ul class="anchors list">
+          <ul class="anchors">
             <li class="item"><a href="./index.html" class="link">Студія</a></li>
             <li class="item"><a href="./portfolio.html" class="link current">Портфоліо</a></li>
             <li class="item"><a href="./index.html" class="link">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="auth-nav list">
+        <ul class="auth-nav">
           <li class="item">
             <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
           </li>
@@ -47,17 +49,17 @@
     </header>
 
     <main>
-      <section>
+      <section class="section">
         <div class="container">
-          <h1 hidden>Портфоліо робіт</h1>
-          <ul class="site-nav-btn section-flex section list">
+          <h1 class="visually-hidden">Портфоліо робіт</h1>
+          <ul class="site-nav-btn section-flex">
             <li class="portfolio-item"><button type="button" class="btn">Усі</button></li>
             <li class="portfolio-item"><button type="button" class="btn">Веб-сайти</button></li>
             <li class="portfolio-item"><button type="button" class="btn">Додатки</button></li>
             <li class="portfolio-item"><button type="button" class="btn">Дизайн</button></li>
             <li class="portfolio-item"><button type="button" class="btn">Маркетинг</button></li>
           </ul>
-          <ul class="portfolio section list">
+          <ul class="portfolio">
             <li class="portfolio-card">
               <img src="./images/portfolio1.jpg" alt="монітор ноутбука" width="370" height="294" />
               <div class="card-description">
@@ -149,13 +151,13 @@
       <div class="container">
         <a href="./index.html" class="footer-logo"><span class="logo">Web</span>Studio</a>
         <address>
-          <ul class="address-list list">
+          <ul class="address-list">
             <li class="footer-item">
               <a
                 href="https://goo.gl/maps/VjB6tUv4UDabMcXd7"
                 target="_blank"
                 rel="nooppener nofollow noreffener"
-                class="address-link"
+                class="address-list link"
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
